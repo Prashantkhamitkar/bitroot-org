@@ -61,16 +61,16 @@ export default function NestedModal({item,handleClosePopup}) {
     //console.log(item)
     object=item;
     console.log(object)
-  const [open, setOpen] = React.useState(false);
-  const [propdata,setpropdata]=React.useState(true)
-   const handleOpen = () => {
-     setOpen(true);
+  // const [open, setOpen] = React.useState(false);
+  // const [propdata,setpropdata]=React.useState(true)
+  //  const handleOpen = () => {
+  //    setOpen(true);
      
      
-   };
+  //  };
  
   const handleClose = () => {
-    setOpen(false);
+    // setOpen(false);
     handleClosePopup();
   };
   
@@ -79,7 +79,7 @@ export default function NestedModal({item,handleClosePopup}) {
     <div>
      
       <Modal
-        open={propdata}
+        open={true}
         onClose={handleClose}
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
