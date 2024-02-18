@@ -1,0 +1,141 @@
+.container {
+  padding: 20px;
+}
+
+/* For big laptop screens */
+@media only screen and (min-width: 1024px) {
+  .image-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .image-card {
+    width: calc(50% - 20px); /* Adjust width for two images in a row */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Add some margin between image cards */
+  }
+  .image-card:nth-child(n+3) {
+    width: calc(50% - 20px); /* Adjust width for pairs of images below */
+  }
+  .image-card:hover {
+    transform: translateY(-5px);
+  }
+  .image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .card-content {
+    padding: 12px;
+  }
+  .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 28px;
+    font-size: 18px;
+    color: #333;
+  }
+  .card-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #787777;
+    margin-bottom: 16px;
+  }
+  .card-content span {
+    margin: 0;
+    font-size: 14px;
+    color: #5d5c5c;
+    
+  }
+  .card-content .date{
+    float: right;
+  }
+  #name{
+    padding-top: 40px;
+    
+  }
+  .learn-more-overlay {
+    position: absolute; /* Position the overlay relative to its container */
+    top: 0; /* Align the overlay to the top of the container */
+    left: 0; /* Align the overlay to the left of the container */
+    width: 100%; /* Make the overlay span the entire width of the container */
+    height: 100%; /* Make the overlay span the entire height of the container */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex; /* Flex layout for content alignment */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    color: #fff; /* Text color for the overlay */
+    font-size: 18px; /* Font size for the overlay text */
+    opacity: 0; /* Initially hide the overlay */
+    transition: opacity 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  .image-card:hover .learn-more-overlay {
+    opacity: 1; /* Show the overlay on hover */
+    cursor: pointer;
+  }
+ 
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 768px) {
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .learn-more-overlay {
+    display: none;
+  }
+  .image-card {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px; /* Add some margin between image cards */
+  }
+  .image-card:hover {
+    transform: translateY(-5px);
+  }
+  .image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+  }
+  .card-content {
+    padding: 12px;
+  }
+  .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #333;
+  }
+  .card-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    
+  }
+  .card-content span {
+    
+    font-size: 14px;
+    color: #5d5c5c;
+  }
+  #name{
+    padding-top: 40px;
+    padding-right: 95px;
+  }
+
+}
